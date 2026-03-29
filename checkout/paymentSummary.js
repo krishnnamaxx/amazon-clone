@@ -19,13 +19,19 @@ import { formatCurrency } from '../scripts/utils/money.js';
     const taxPrice = totalBeforeTax * 0.1;
     const totalPrice = totalBeforeTax + taxPrice;
 
+    let cartQuantity = 0;
+
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+
     const paymentSummaryHTML = `
     <div class="payment-summary-title">
         Order Summary
     </div>
 
     <div class="payment-summary-row">
-        <div>Items:</div>
+        <div>Items(${cartQuantity}):</div>
         <div class="payment-summary-money">${formatCurrency(productPrice)}</div>
     </div>
 
