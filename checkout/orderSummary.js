@@ -8,7 +8,7 @@ import { renderCheckoutHeader} from './checkoutHeader.js';
 
 
  export function renderOrderSummary(){
-
+ // generating HTML for order summary
     let cartSummaryHTML='';
     cart.forEach((cartItem)=>{
         const productId=cartItem.productId;
