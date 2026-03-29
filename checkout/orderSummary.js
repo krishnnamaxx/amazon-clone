@@ -13,7 +13,7 @@ import { renderCheckoutHeader} from './checkoutHeader.js';
     cart.forEach((cartItem)=>{
         const productId=cartItem.productId;  // added this line to get productId from cartItem
 
-        const matchingProduct=getProduct(productId);
+        const matchingProduct=getProduct(productId); 
 
     const deliveryOptionId=cartItem.deliveryOptionId;
     const  deliveryOption =getDeliveryOption(deliveryOptionId);
@@ -161,7 +161,7 @@ import { renderCheckoutHeader} from './checkoutHeader.js';
             const {productId,deliveryOptionId}=optionElement.dataset;
             updateDeliveryOption(productId,deliveryOptionId);
             renderOrderSummary();
-            renderPaymentSummary();
+            renderPaymentSummary();  // calling this function to update the payment summary when delivery option is changed
         })
     }
     );
