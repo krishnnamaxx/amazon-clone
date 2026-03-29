@@ -11,7 +11,7 @@ import { renderCheckoutHeader} from './checkoutHeader.js';
  // generating HTML for order summary
     let cartSummaryHTML='';
     cart.forEach((cartItem)=>{
-        const productId=cartItem.productId;
+        const productId=cartItem.productId;  // added this line to get productId from cartItem
 
         const matchingProduct=getProduct(productId);
 
